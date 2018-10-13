@@ -4,7 +4,7 @@
 `A simple Flashcard
 
 ### App Walk-though
-<img src="https://user-images.githubusercontent.com/32272045/46910297-c4e71780-cf07-11e8-8d94-03a63fdfe7b8.gif" width=200><br>
+<img src=https://user-images.githubusercontent.com/32272045/46910297-c4e71780-cf07-11e8-8d94-03a63fdfe7b8.gif width=200><br>
 
 
 ## Required
