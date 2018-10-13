@@ -4,9 +4,8 @@
 `A simple Flashcard
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
-/Users/dinaolmelak/Desktop/Code Path/Flashcards/Flash card.gif
-<img src="YOUR_GIF_URL_HERE" width=200><br>
+<img src="https://user-images.githubusercontent.com/32272045/46910297-c4e71780-cf07-11e8-8d94-03a63fdfe7b8.gif" width=200><br>
+
 
 ## Required
 - [x] Create New Project in Xcode
