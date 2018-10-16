@@ -19,8 +19,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapFlashcard(_ sender: Any) {
-        questionLabel.isHidden=true
-        
+        if(questionLabel.isHidden==false)
+        {
+            questionLabel.isHidden=true
+        }
+        else
+        {
+            questionLabel.isHidden=false
+        }
         
     }
     
