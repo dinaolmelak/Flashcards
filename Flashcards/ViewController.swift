@@ -11,10 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
+    @IBOutlet weak var card: UIView!
+    @IBOutlet weak var question: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        card.layer.cornerRadius=30.0
+        card.clipsToBounds=true
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -30,10 +34,7 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func didTapReset(_ sender: Any) {
-        questionLabel.isHidden=false
-        
-    }
+    
     
 }
 
