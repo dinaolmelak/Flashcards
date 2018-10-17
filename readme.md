@@ -4,9 +4,7 @@
 `A simple Flashcard for Lab 1 of CodePath course.
 
 ### App Walk-though
-<img src=https://user-images.githubusercontent.com/32272045/46910297-c4e71780-cf07-11e8-8d94-03a63fdfe7b8.gif width=200><br>
-
-<img src= https://user-images.githubusercontent.com/32272045/47116825-5b794880-d228-11e8-8eaa-62aa5e95330e.gif width=200><br>
+<img src=https://user-images.githubusercontent.com/32272045/46910297-c4e71780-cf07-11e8-8d94-03a63fdfe7b8.gif width=200><br> <img src= https://user-images.githubusercontent.com/32272045/47116825-5b794880-d228-11e8-8eaa-62aa5e95330e.gif width=200><br>
 
 ## Required
 - [x] Create New Project in Xcode
