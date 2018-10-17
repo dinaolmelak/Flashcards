@@ -18,7 +18,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         card.layer.cornerRadius=30.0
-        card.clipsToBounds=true
+        answerLabel.layer.cornerRadius=30.0
+        questionLabel.layer.cornerRadius=30.0
+        card.layer.shadowRadius=15.0
+        card.layer.shadowOpacity=0.2
+        answerLabel.clipsToBounds=true
+        questionLabel.clipsToBounds=true
         // Do any additional setup after loading the view, typically from a nib.
     }
     
