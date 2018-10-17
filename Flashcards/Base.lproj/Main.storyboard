@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cai-By-yEb">
-                                <rect key="frame" x="31" y="104" width="312" height="310"/>
+                                <rect key="frame" x="31" y="69" width="312" height="310"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Addis Ababa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHO-Mc-T4f">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correct!!🎊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHO-Mc-T4f">
                                         <rect key="frame" x="-11" y="-13" width="336" height="338"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.56862745100000001" green="0.47058823529999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -41,26 +41,53 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="veL-h6-V02" appends="YES" id="OGr-mT-ZmN"/>
-                                </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN2-5Q-fJF">
+                                <rect key="frame" x="31" y="404" width="312" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Gondar"/>
+                                <connections>
+                                    <action selector="didTapBtnOptionOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ipi-WI-9ry"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjX-47-xcU">
+                                <rect key="frame" x="31" y="475" width="312" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Addis Ababa"/>
+                                <connections>
+                                    <action selector="didTapBtnOptionTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Eb-ga-g9V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qne-Za-HZk">
+                                <rect key="frame" x="31" y="546" width="312" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Adama"/>
+                                <connections>
+                                    <action selector="didTapBtnOptionThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lcp-mJ-CWw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="veL-h6-V02" appends="YES" id="IiK-XA-5Vt"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="UHO-Mc-T4f" id="a7V-oH-P9H"/>
                         <outlet property="card" destination="cai-By-yEb" id="yTw-cX-eRA"/>
+                        <outlet property="firstButton" destination="UN2-5Q-fJF" id="WHG-le-3yI"/>
                         <outlet property="question" destination="Px8-i4-FSK" id="3JB-Ki-JhM"/>
                         <outlet property="questionLabel" destination="Px8-i4-FSK" id="3bI-wE-5V3"/>
+                        <outlet property="secondButton" destination="mjX-47-xcU" id="doz-Ir-ohz"/>
+                        <outlet property="thirdButton" destination="qne-Za-HZk" id="1Ka-Zb-6r6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="veL-h6-V02" userLabel="Show Answer gesture">
+                <tapGestureRecognizer id="veL-h6-V02" userLabel="Reset Answer gesture">
                     <connections>
-                        <action selector="didTapFlashcard:" destination="BYZ-38-t0r" id="kkI-jN-inM"/>
+                        <action selector="didTapReset:" destination="BYZ-38-t0r" id="Rvj-w7-MKy"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
