@@ -45,6 +45,20 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigationController = segue.destination as! UINavigationController
+        let creationController = navigationController.topViewController as! CreationViewController
+        
+        creationController.flashcardsController = self
+        
+    }
+    
+    func updateFlashcard(newQuestion: String,newAnswer: String){
+        questionLabel.text = newQuestion
+        answerLabel.text = newAnswer
+        
+    }
+    
     @IBAction func didTapReset(_ sender: Any) {
         questionLabel.isHidden=false
         firstButton.layer.backgroundColor=firstBtnBGColor
@@ -67,7 +81,6 @@ class ViewController: UIViewController {
         //thirdButton.backgroundColor=#colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
         thirdButton.isHidden=true
     }
-    
     
 }
 

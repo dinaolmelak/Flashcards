@@ -12,6 +12,7 @@
 		C00363A12172865600CCCB6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C003639F2172865600CCCB6A /* Main.storyboard */; };
 		C00363A32172865900CCCB6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00363A22172865900CCCB6A /* Assets.xcassets */; };
 		C00363A62172865900CCCB6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00363A42172865900CCCB6A /* LaunchScreen.storyboard */; };
+		C0CDA7E6217902F80091C9A4 /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CDA7E5217902F80091C9A4 /* CreationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C00363A22172865900CCCB6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C00363A52172865900CCCB6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C00363A72172865900CCCB6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0CDA7E5217902F80091C9A4 /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				C003639B2172865600CCCB6A /* AppDelegate.swift */,
 				C003639D2172865600CCCB6A /* ViewController.swift */,
 				C003639F2172865600CCCB6A /* Main.storyboard */,
+				C0CDA7E5217902F80091C9A4 /* CreationViewController.swift */,
 				C00363A22172865900CCCB6A /* Assets.xcassets */,
 				C00363A42172865900CCCB6A /* LaunchScreen.storyboard */,
 				C00363A72172865900CCCB6A /* Info.plist */,
@@ -137,6 +140,7 @@
 			files = (
 				C003639E2172865600CCCB6A /* ViewController.swift in Sources */,
 				C003639C2172865600CCCB6A /* AppDelegate.swift in Sources */,
+				C0CDA7E6217902F80091C9A4 /* CreationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
