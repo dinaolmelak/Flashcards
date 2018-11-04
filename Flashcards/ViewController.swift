@@ -58,10 +58,13 @@ class ViewController: UIViewController {
         
     }
     
-    func updateFlashcard(newQuestion: String,newAnswer: String){
+    func updateFlashcard(newQuestion: String,newAnswer: String, extraAns1: String,extraAns2: String){
         questionLabel.text = newQuestion
         answerLabel.text = newAnswer
         
+        firstButton.setTitle(extraAns1, for: .normal)
+        secondButton.setTitle(newAnswer, for: .normal)
+        thirdButton.setTitle(extraAns2, for: .normal)
     }
     
     @IBAction func didTapReset(_ sender: Any) {

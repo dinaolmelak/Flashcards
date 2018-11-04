@@ -15,8 +15,10 @@ class CreationViewController: UIViewController {
     var initialAnswer: String?
     
     @IBOutlet weak var questionTextField: UITextField!
-    
     @IBOutlet weak var answerTextField: UITextField!
+    
+    @IBOutlet weak var extraAnswer1: UITextField!
+    @IBOutlet weak var extraAnswer2: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +32,9 @@ class CreationViewController: UIViewController {
     
     @IBAction func didTapOnDone(_ sender: Any) {
         let questionText = questionTextField.text
-        
-        
         let answerText = answerTextField.text
+        let newExtraAns1 = extraAnswer1.text
+        let newExtraAns2 = extraAnswer2.text
         
         let alert = UIAlertController(title: "Missing Info", message: "Either the question or answer field is left blank!", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK, I'll fix it", style: .default)
@@ -43,7 +45,7 @@ class CreationViewController: UIViewController {
             present(alert, animated: true)
         }
         else{
-            flashcardsController.updateFlashcard(newQuestion: questionText!, newAnswer: answerText!)
+            flashcardsController.updateFlashcard(newQuestion: questionText!, newAnswer: answerText!, extraAns1: newExtraAns1!,extraAns2: newExtraAns2!)
             dismiss(animated: true)
         }
         

@@ -16,4 +16,4 @@ An app that lets you take flashcards
 ## Optional
 - [x] User gets an error if they try to create a new flashcard with no question or answer
 - [x] User can edit existing flashcard
-- [ ] User can add multiple choice answers in the creation screen
+- [x] User can add multiple choice answers in the creation screen

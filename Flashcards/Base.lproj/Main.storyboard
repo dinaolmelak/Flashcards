@@ -124,6 +124,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Extra Answer #1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQF-Ux-MlO">
+                                <rect key="frame" x="56" y="225" width="270" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Extra Answer #2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pDN-QT-O23">
+                                <rect key="frame" x="56" y="276" width="270" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="88b-TU-YAI"/>
@@ -142,6 +156,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="answerTextField" destination="ERB-Jq-nzt" id="YRS-xY-gY9"/>
+                        <outlet property="extraAnswer1" destination="bQF-Ux-MlO" id="itg-7L-uf8"/>
+                        <outlet property="extraAnswer2" destination="pDN-QT-O23" id="seH-TM-p7r"/>
                         <outlet property="questionTextField" destination="85s-1C-a9t" id="yMT-2J-PWG"/>
                     </connections>
                 </viewController>
