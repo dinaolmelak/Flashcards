@@ -11,6 +11,8 @@ import UIKit
 class CreationViewController: UIViewController {
 
     var flashcardsController: ViewController!
+    var initialQuestion: String?
+    var initialAnswer: String?
     
     @IBOutlet weak var questionTextField: UITextField!
     
@@ -18,7 +20,8 @@ class CreationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        questionTextField.text = initialQuestion
+        answerTextField.text = initialAnswer
         // Do any additional setup after loading the view.
     }
     @IBAction func didTapOnCancel(_ sender: Any) {
