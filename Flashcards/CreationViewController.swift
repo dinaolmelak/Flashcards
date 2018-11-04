@@ -31,12 +31,19 @@ class CreationViewController: UIViewController {
         
         let answerText = answerTextField.text
         
+        let alert = UIAlertController(title: "Missing Info", message: "Either the question or answer field is left blank!", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK, I'll fix it", style: .default)
+        alert.addAction(okAction)
         
+        if(questionTextField.text==nil||answerTextField.text==nil||questionText!.isEmpty||answerText!.isEmpty)
+        {
+            present(alert, animated: true)
+        }
+        else{
+            flashcardsController.updateFlashcard(newQuestion: questionText!, newAnswer: answerText!)
+            dismiss(animated: true)
+        }
         
-        flashcardsController.updateFlashcard(newQuestion: questionText!, newAnswer: answerText!)
-        
-        
-        dismiss(animated: true)
     }
     
     /*
