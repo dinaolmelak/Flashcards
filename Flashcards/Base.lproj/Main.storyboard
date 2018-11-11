@@ -75,6 +75,22 @@
                                     <action selector="didTapBtnOptionThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lcp-mJ-CWw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJg-tw-oE5">
+                                <rect key="frame" x="24" y="617" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Prev"/>
+                                <connections>
+                                    <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5rv-Qp-JqZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pr9-zg-gvO">
+                                <rect key="frame" x="320" y="617" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i05-Zf-n9a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -87,6 +103,8 @@
                         <outlet property="answerLabel" destination="UHO-Mc-T4f" id="a7V-oH-P9H"/>
                         <outlet property="card" destination="cai-By-yEb" id="yTw-cX-eRA"/>
                         <outlet property="firstButton" destination="UN2-5Q-fJF" id="WHG-le-3yI"/>
+                        <outlet property="nextButton" destination="pr9-zg-gvO" id="ps0-Ul-4os"/>
+                        <outlet property="prevButton" destination="ZJg-tw-oE5" id="3Wa-L2-I8z"/>
                         <outlet property="question" destination="Px8-i4-FSK" id="3JB-Ki-JhM"/>
                         <outlet property="questionLabel" destination="Px8-i4-FSK" id="3bI-wE-5V3"/>
                         <outlet property="secondButton" destination="mjX-47-xcU" id="doz-Ir-ohz"/>
