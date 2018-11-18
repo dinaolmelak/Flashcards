@@ -1,18 +1,18 @@
-## Lab 2
+## Lab 3
 
 ### App Description
 An app that lets you take flashcards
 
 ### App Walk-though
-<img src=https://user-images.githubusercontent.com/32272045/47611714-c3a20880-da38-11e8-8b75-07ce68eadd0b.gif width=200/><img src=https://user-images.githubusercontent.com/32272045/47969501-45e48b00-e03e-11e8-94d5-eb3ac344175e.gif width=200>
+
+<img src=https://user-images.githubusercontent.com/32272045/48679917-668f0380-eb5b-11e8-95d9-50999727b76c.gif width=200><br>
 
 
 ## Required
-- [x] User can open the creation screen
-- [x] User can cancel out of the creation screen
-- [x] User can enter a new question and answer in the creation screen to then show it on the flashcard
-- [x] Push code to GitHub
+- [x ] User can browse through multiple flashcards
+- [x ] User can re-open the app and see previously created flashcards
+- [x ] Push code to GitHub
 ## Optional
-- [x] User gets an error if they try to create a new flashcard with no question or answer
-- [x] User can edit existing flashcard
-- [x] User can add multiple choice answers in the creation screen
+- [ ] User can delete a flashcard
+- [ ] User can edit existing flashcard
+- [ ] User can store multiple choice questions
