@@ -140,9 +140,9 @@ class ViewController: UIViewController {
         //update labels
         questionLabel.text = currentFlashcard.question
         answerLabel.text=currentFlashcard.answer
-        firstButton.titleLabel?.text=currentFlashcard.multipleChoice1
-        secondButton.titleLabel?.text=currentFlashcard.answer
-        thirdButton.titleLabel?.text=currentFlashcard.multipleChoice2
+        firstButton.setTitle(currentFlashcard.multipleChoice1, for: .normal)
+        secondButton.setTitle(currentFlashcard.answer, for: .normal)
+        thirdButton.setTitle(currentFlashcard.multipleChoice2, for: .normal)
     }
     
     func saveAllFlashcardsToDisk(){
