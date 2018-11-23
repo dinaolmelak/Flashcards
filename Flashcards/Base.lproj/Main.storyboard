@@ -47,6 +47,15 @@
                                             <segue destination="Hu6-c5-HVT" kind="show" identifier="EditSegue" id="fWf-UR-Mb8"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPI-LF-9C2">
+                                        <rect key="frame" x="-3" y="-3" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="❌"/>
+                                        <connections>
+                                            <action selector="didTapOnDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Gp-vo-Bhs"/>
+                                            <action selector="didTapOnDelete:" destination="NLO-0L-BaI" eventType="touchUpInside" id="SjV-qT-4MN"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
@@ -127,6 +136,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="NLO-0L-BaI" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="veL-h6-V02" userLabel="Reset Answer gesture">
                     <connections>
                         <action selector="didTapReset:" destination="BYZ-38-t0r" id="Rvj-w7-MKy"/>

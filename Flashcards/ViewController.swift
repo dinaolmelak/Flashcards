@@ -193,6 +193,29 @@ class ViewController: UIViewController {
         
         updateNextPrevButtons()
     }
+    @IBAction func didTapOnDelete(_ sender: Any) {
+        let alert = UIAlertController(title: "Delete Flashcard?", message: "Are You Sure You Want To Delete This?", preferredStyle: .actionSheet)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive){action in self.deleteCurrentFlashcard()}
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+        
+    }
+    
+    func deleteCurrentFlashcard(){
+        flashcards.remove(at: currentIndex)
+        
+        if currentIndex>flashcards.count-1{
+            currentIndex=flashcards.count-1
+        }
+        updateLabels()
+        updateNextPrevButtons()
+        saveAllFlashcardsToDisk()
+        
+    }
+    
+    
     
 }
 
