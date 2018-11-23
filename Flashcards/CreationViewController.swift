@@ -13,6 +13,8 @@ class CreationViewController: UIViewController {
     var flashcardsController: ViewController!
     var initialQuestion: String?
     var initialAnswer: String?
+    var initialChoice1: String?
+    var initialChoice2: String?
     
     @IBOutlet weak var questionTextField: UITextField!
     @IBOutlet weak var answerTextField: UITextField!
@@ -24,6 +26,8 @@ class CreationViewController: UIViewController {
         super.viewDidLoad()
         questionTextField.text = initialQuestion
         answerTextField.text = initialAnswer
+        extraAnswer1.text = initialChoice1
+        extraAnswer2.text = initialChoice2
         // Do any additional setup after loading the view.
     }
     @IBAction func didTapOnCancel(_ sender: Any) {

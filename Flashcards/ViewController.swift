@@ -79,6 +79,8 @@ class ViewController: UIViewController {
         {
             creationController.initialQuestion = questionLabel.text
             creationController.initialAnswer = answerLabel.text
+            creationController.initialChoice1 = firstButton.titleLabel?.text
+            creationController.initialChoice2 = thirdButton.titleLabel?.text
         }
         
         
