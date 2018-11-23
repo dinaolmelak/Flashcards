@@ -49,7 +49,7 @@ class CreationViewController: UIViewController {
             if initialQuestion != nil{
                 isExisting = true
             }
-            flashcardsController.updateFlashcard(newQuestion: questionText!, newAnswer: answerText!, isExisting: isExisting, extraAns1: newExtraAns1!,extraAns2: newExtraAns2!)
+        flashcardsController.updateFlashcard(newQuestion: questionText!, newAnswer: answerText!, isExisting: isExisting, extraAns1: newExtraAns1!,extraAns2: newExtraAns2!)
             dismiss(animated: true)
         }
         

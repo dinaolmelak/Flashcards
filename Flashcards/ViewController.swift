@@ -11,6 +11,8 @@ import UIKit
 struct Flashcard{
     var question: String
     var answer: String
+    var multipleChoice1: String
+    var multipleChoice2: String
 }
 
 
@@ -86,7 +88,7 @@ class ViewController: UIViewController {
     
     func updateFlashcard(newQuestion: String,newAnswer: String,isExisting: Bool, extraAns1: String,extraAns2: String){
         
-        let flashcard = Flashcard(question: newQuestion, answer: newAnswer)
+        let flashcard = Flashcard(question: newQuestion, answer: newAnswer, multipleChoice1: extraAns1, multipleChoice2: extraAns2)
         
         if isExisting{
             flashcards[currentIndex]=flashcard
@@ -99,7 +101,7 @@ class ViewController: UIViewController {
         currentIndex = flashcards.count-1
         print("Our currentIndex is \(currentIndex)")
         
-        //updateNextPrevButtons()
+        updateNextPrevButtons()
         }
         updateLabels()
         
@@ -136,11 +138,14 @@ class ViewController: UIViewController {
         //update labels
         questionLabel.text = currentFlashcard.question
         answerLabel.text=currentFlashcard.answer
+        firstButton.titleLabel?.text=currentFlashcard.multipleChoice1
+        secondButton.titleLabel?.text=currentFlashcard.answer
+        thirdButton.titleLabel?.text=currentFlashcard.multipleChoice2
     }
     
     func saveAllFlashcardsToDisk(){
         let dictionaryArray = flashcards.map { (card) -> [String: String] in
-            return["question": card.question, "answer": card.answer]
+            return["question": card.question, "answer": card.answer,"extraAnswer1": card.multipleChoice1,"extraAnswer2": card.multipleChoice2]
         }
         //UserDefaults.standard.set(flashcards, forKey: "savedFlashcards") //if used u get a crash b/c ur using an array n not dictionary
         UserDefaults.standard.set(dictionaryArray, forKey: "flashcards")
@@ -150,7 +155,7 @@ class ViewController: UIViewController {
     func readSavedFlashcards(){
         
         if let dictionaryArray = UserDefaults.standard.array(forKey: "flashcards") as? [[String: String]]{
-            let savedCards = dictionaryArray.map{dictionary -> Flashcard in return Flashcard(question: dictionary["question"]!, answer: dictionary["answer"]!)
+            let savedCards = dictionaryArray.map{dictionary -> Flashcard in return Flashcard(question: dictionary["question"]!, answer: dictionary["answer"]!, multipleChoice1: dictionary["extraAnswer1"]!, multipleChoice2: dictionary["extraAnswer2"]!)
                 
             }
             flashcards.append(contentsOf: savedCards)
