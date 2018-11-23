@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         readSavedFlashcards()
         
         if flashcards.count == 0{
-            updateFlashcard(newQuestion: "What is the Capital City of Ethiopia🇪🇹?", newAnswer: "Addis Ababa", extraAns1: "Gondar", extraAns2: "Adama")
+            updateFlashcard(newQuestion: "What is the Capital City of Ethiopia🇪🇹?", newAnswer: "Addis Ababa", isExisting: false, extraAns1: "Gondar", extraAns2: "Adama")
         }
         else{
             updateLabels()
@@ -84,11 +84,14 @@ class ViewController: UIViewController {
         
     }
     
-    func updateFlashcard(newQuestion: String,newAnswer: String, extraAns1: String,extraAns2: String){
+    func updateFlashcard(newQuestion: String,newAnswer: String,isExisting: Bool, extraAns1: String,extraAns2: String){
         
         let flashcard = Flashcard(question: newQuestion, answer: newAnswer)
         
-        
+        if isExisting{
+            flashcards[currentIndex]=flashcard
+        }
+        else{
         flashcards.append(flashcard)
         
         print("🎊Able to Append Flashcard")
@@ -96,10 +99,9 @@ class ViewController: UIViewController {
         currentIndex = flashcards.count-1
         print("Our currentIndex is \(currentIndex)")
         
-        updateNextPrevButtons()
+        //updateNextPrevButtons()
+        }
         updateLabels()
-        //questionLabel.text = flashcard.question
-        //answerLabel.text = flashcard.answer
         
         firstButton.setTitle(extraAns1, for: .normal)
         secondButton.setTitle(newAnswer, for: .normal)
