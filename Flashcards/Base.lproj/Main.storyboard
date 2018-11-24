@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Flashcards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cai-By-yEb">
-                                <rect key="frame" x="31" y="69" width="312" height="310"/>
+                            <view contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cai-By-yEb">
+                                <rect key="frame" x="31" y="69" width="313" height="310"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correct!!🎊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHO-Mc-T4f">
@@ -84,24 +84,37 @@
                                     <action selector="didTapBtnOptionThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lcp-mJ-CWw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJg-tw-oE5">
-                                <rect key="frame" x="8" y="629" width="31" height="30"/>
-                                <state key="normal" title="Prev"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJg-tw-oE5">
+                                <rect key="frame" x="16" y="703" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="C6m-0c-egI"/>
+                                    <constraint firstAttribute="width" constant="64" id="KAj-29-jHu"/>
+                                </constraints>
+                                <state key="normal" title="Prev" image="arrowLeft"/>
+                                <state key="disabled" image="arrowLeftDisabled"/>
                                 <connections>
                                     <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5rv-Qp-JqZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pr9-zg-gvO">
-                                <rect key="frame" x="335" y="629" width="32" height="30"/>
-                                <state key="normal" title="Next"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pr9-zg-gvO">
+                                <rect key="frame" x="295" y="703" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="2Nn-dQ-uwZ"/>
+                                    <constraint firstAttribute="height" constant="64" id="7Pp-U0-VWE"/>
+                                </constraints>
+                                <state key="normal" title="Next" image="arrowRight"/>
+                                <state key="disabled" image="arrowRightDisabled"/>
                                 <connections>
                                     <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i05-Zf-n9a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P11-F7-BXx">
-                                <rect key="frame" x="168.6256865900325" y="614" width="34.999999999999915" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="+"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P11-F7-BXx">
+                                <rect key="frame" x="156" y="703" width="63" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="2md-4i-XT9"/>
+                                    <constraint firstAttribute="width" constant="63" id="Qry-Js-qeg"/>
+                                </constraints>
+                                <state key="normal" title="+" image="addButton"/>
                                 <connections>
                                     <segue destination="Hu6-c5-HVT" kind="show" id="2Nj-On-zEM"/>
                                 </connections>
@@ -110,13 +123,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pr9-zg-gvO" secondAttribute="bottom" constant="8" id="D0z-KK-tGO"/>
-                            <constraint firstItem="pr9-zg-gvO" firstAttribute="leading" secondItem="P11-F7-BXx" secondAttribute="trailing" constant="131.37" id="F2u-FQ-nDk"/>
-                            <constraint firstItem="P11-F7-BXx" firstAttribute="leading" secondItem="ZJg-tw-oE5" secondAttribute="trailing" constant="129.63" id="Leb-HW-hwf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZJg-tw-oE5" secondAttribute="bottom" constant="8" id="OYP-l3-aRx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P11-F7-BXx" secondAttribute="bottom" constant="9" id="aTe-98-MNj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pr9-zg-gvO" secondAttribute="trailing" constant="8" id="sxO-DY-TKy"/>
-                            <constraint firstItem="ZJg-tw-oE5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="xkJ-WD-Zyt"/>
+                            <constraint firstItem="P11-F7-BXx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Dd-gq-SxR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P11-F7-BXx" secondAttribute="bottom" constant="11" id="C86-wU-pvM"/>
+                            <constraint firstItem="ZJg-tw-oE5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Etl-Ly-t1i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZJg-tw-oE5" secondAttribute="bottom" constant="11" id="X0l-pS-34B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pr9-zg-gvO" secondAttribute="bottom" constant="11" id="fAU-ab-jDC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pr9-zg-gvO" secondAttribute="trailing" constant="16" id="tUx-eP-Kpc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -150,7 +162,7 @@
             <objects>
                 <viewController id="v57-YD-hJZ" customClass="CreationViewController" customModule="Flashcards" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tlr-5D-o4z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ERB-Jq-nzt">
@@ -214,7 +226,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hu6-c5-HVT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xKe-RF-dCB">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -227,6 +239,13 @@
             <point key="canvasLocation" x="909.60000000000002" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="addButton" width="64" height="64"/>
+        <image name="arrowLeft" width="64" height="64"/>
+        <image name="arrowLeftDisabled" width="64" height="64"/>
+        <image name="arrowRight" width="64" height="64"/>
+        <image name="arrowRightDisabled" width="64" height="64"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2Nj-On-zEM"/>
     </inferredMetricsTieBreakers>

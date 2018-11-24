@@ -179,7 +179,7 @@ class ViewController: UIViewController {
     }
     @IBAction func didTapBtnOptionTwo(_ sender: Any) {
         secondButton.backgroundColor=#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
-        questionLabel.isHidden=true
+        flipFlashcard()
         
     }
     @IBAction func didTapBtnOptionThree(_ sender: Any) {
@@ -223,7 +223,12 @@ class ViewController: UIViewController {
         saveAllFlashcardsToDisk()
         
     }
-    
+    func flipFlashcard(){
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            self.questionLabel.isHidden=true
+        })
+        
+    }
     
     
 }
