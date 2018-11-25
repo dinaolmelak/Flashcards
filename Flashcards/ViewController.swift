@@ -188,10 +188,11 @@ class ViewController: UIViewController {
     }
     @IBAction func didTapOnNext(_ sender: Any) {
         // Increase current index
+        animateCardOutToLeft()
         currentIndex = currentIndex + 1
         
         
-        updateLabels()
+        
         
         updateNextPrevButtons()
     }
@@ -229,6 +230,20 @@ class ViewController: UIViewController {
         })
         
     }
+    func animateCardOutToLeft(){
+        UIView.animate(withDuration: 0.3, animations: {self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)}, completion: {finished in
+            
+            self.updateLabels()
+            
+            self.animateCardInFromRight()
+            
+        })
+    }
+    func animateCardInFromRight(){
+        card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        UIView.animate(withDuration: 0.3) {self.card.transform = CGAffineTransform.identity}
+    }
+    
     
     
 }
