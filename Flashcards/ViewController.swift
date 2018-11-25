@@ -74,14 +74,10 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        card.alpha = 0.0
-        card.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
-        
-        //animation
-        UIView.animate(withDuration: 0.6, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
-            self.card.alpha = 1.0
-            self.card.transform = CGAffineTransform.identity
-        })
+        animateCard()
+        animateFirstButton()
+        animateSecondButton()
+        animateThirdButton()
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -177,7 +173,23 @@ class ViewController: UIViewController {
         
     }
     @IBAction func didTapReset(_ sender: Any) {
-        questionLabel.isHidden=false
+        if questionLabel.isHidden==true{
+            UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromLeft, animations: {
+                self.questionLabel.isHidden=false
+            })
+        }
+        else{
+            //begin animation
+            UIView.animate(withDuration: 0.6, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+                self.card.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+            })
+            //end animation
+            UIView.animate(withDuration: 0.6, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+                self.card.alpha = 1.0
+                self.card.transform = CGAffineTransform.identity
+            })
+        }
+        //questionLabel.isHidden=false
         firstButton.layer.backgroundColor=firstBtnBGColor
         secondButton.layer.backgroundColor=firstBtnBGColor
         thirdButton.layer.backgroundColor=firstBtnBGColor
@@ -265,6 +277,51 @@ class ViewController: UIViewController {
             
         })
     }
+    
+    func animateCard(){
+        card.alpha = 0.0
+        card.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        
+        //animation
+        UIView.animate(withDuration: 0.6, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+            self.card.alpha = 1.0
+            self.card.transform = CGAffineTransform.identity
+        })
+    }
+    
+    
+    func animateFirstButton(){
+        firstButton.alpha = 0.0
+        firstButton.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        //Here Comes the animation
+        UIView.animate(withDuration: 0.6, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+            self.firstButton.alpha = 1.0
+            self.firstButton.transform = CGAffineTransform.identity
+        })
+    }
+    func animateSecondButton(){
+        secondButton.alpha = 0.0
+        secondButton.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        //Here Comes the animation
+        UIView.animate(withDuration: 0.6, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+            self.secondButton.alpha = 1.0
+            self.secondButton.transform = CGAffineTransform.identity
+        })
+    }
+    func animateThirdButton(){
+        thirdButton.alpha = 0.0
+        thirdButton.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        //Here Comes the animation
+        UIView.animate(withDuration: 0.6, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+            self.thirdButton.alpha = 1.0
+            self.thirdButton.transform = CGAffineTransform.identity
+        })
+    }
+    
+    
+    
+    
+    
     
 }
 

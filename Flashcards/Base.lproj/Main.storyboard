@@ -63,6 +63,14 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="313" id="fvz-D6-uZa"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN2-5Q-fJF">
+                                <rect key="frame" x="32" y="460" width="312" height="63"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Gondar"/>
+                                <connections>
+                                    <action selector="didTapBtnOptionOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ipi-WI-9ry"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjX-47-xcU">
                                 <rect key="frame" x="31" y="531" width="312" height="63"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -112,14 +120,6 @@
                                 <state key="normal" title="+" image="addButton"/>
                                 <connections>
                                     <segue destination="Hu6-c5-HVT" kind="show" id="2Nj-On-zEM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN2-5Q-fJF">
-                                <rect key="frame" x="32" y="460" width="312" height="63"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Gondar"/>
-                                <connections>
-                                    <action selector="didTapBtnOptionOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ipi-WI-9ry"/>
                                 </connections>
                             </button>
                         </subviews>
