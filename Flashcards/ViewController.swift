@@ -71,7 +71,19 @@ class ViewController: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        card.alpha = 0.0
+        card.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        
+        //animation
+        UIView.animate(withDuration: 0.6, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+            self.card.alpha = 1.0
+            self.card.transform = CGAffineTransform.identity
+        })
+        
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let navigationController = segue.destination as! UINavigationController
         let creationController = navigationController.topViewController as! CreationViewController

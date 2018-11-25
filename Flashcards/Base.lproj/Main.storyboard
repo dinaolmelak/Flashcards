@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cai-By-yEb">
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="cai-By-yEb">
                                 <rect key="frame" x="31" y="69" width="313" height="310"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correct!!🎊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHO-Mc-T4f">
                                         <rect key="frame" x="-11" y="-13" width="336" height="338"/>
@@ -59,26 +58,22 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="310" id="C4R-WE-msC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="313" id="fvz-D6-uZa"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN2-5Q-fJF">
-                                <rect key="frame" x="31" y="404" width="312" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Gondar"/>
-                                <connections>
-                                    <action selector="didTapBtnOptionOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ipi-WI-9ry"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjX-47-xcU">
-                                <rect key="frame" x="31" y="475" width="312" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="31" y="531" width="312" height="63"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Addis Ababa"/>
                                 <connections>
                                     <action selector="didTapBtnOptionTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Eb-ga-g9V"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qne-Za-HZk">
-                                <rect key="frame" x="31" y="546" width="312" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="31" y="602" width="312" height="63"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Adama"/>
                                 <connections>
                                     <action selector="didTapBtnOptionThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lcp-mJ-CWw"/>
@@ -119,6 +114,14 @@
                                     <segue destination="Hu6-c5-HVT" kind="show" id="2Nj-On-zEM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN2-5Q-fJF">
+                                <rect key="frame" x="32" y="460" width="312" height="63"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Gondar"/>
+                                <connections>
+                                    <action selector="didTapBtnOptionOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ipi-WI-9ry"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -126,9 +129,13 @@
                             <constraint firstItem="P11-F7-BXx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Dd-gq-SxR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P11-F7-BXx" secondAttribute="bottom" constant="11" id="C86-wU-pvM"/>
                             <constraint firstItem="ZJg-tw-oE5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Etl-Ly-t1i"/>
+                            <constraint firstItem="cai-By-yEb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="RHk-Yb-zm6"/>
+                            <constraint firstItem="cai-By-yEb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="RNS-lC-q9X"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZJg-tw-oE5" secondAttribute="bottom" constant="11" id="X0l-pS-34B"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pr9-zg-gvO" secondAttribute="bottom" constant="11" id="fAU-ab-jDC"/>
+                            <constraint firstItem="cai-By-yEb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rhk-Qk-3qU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pr9-zg-gvO" secondAttribute="trailing" constant="16" id="tUx-eP-Kpc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cai-By-yEb" secondAttribute="trailing" constant="31" id="tdx-nj-zqz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
