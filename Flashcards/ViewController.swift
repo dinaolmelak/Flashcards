@@ -191,15 +191,12 @@ class ViewController: UIViewController {
         animateCardOutToLeft()
         currentIndex = currentIndex + 1
         
-        
-        
-        
         updateNextPrevButtons()
     }
     @IBAction func didTapOnPrev(_ sender: Any) {
+        animateCardOutToRight()
         currentIndex = currentIndex - 1
         
-        updateLabels()
         
         updateNextPrevButtons()
     }
@@ -243,8 +240,19 @@ class ViewController: UIViewController {
         card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
         UIView.animate(withDuration: 0.3) {self.card.transform = CGAffineTransform.identity}
     }
-    
-    
+    func animateCardInFromLeft(){
+        card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        UIView.animate(withDuration: 0.3) {self.card.transform = CGAffineTransform.identity}
+    }
+    func animateCardOutToRight(){
+        UIView.animate(withDuration: 0.3, animations: {self.card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)}, completion: {finished in
+            
+            self.updateLabels()
+            
+            self.animateCardInFromLeft()
+            
+        })
+    }
     
 }
 
