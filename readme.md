@@ -1,18 +1,21 @@
-## Lab 3
+## Lab 4
 
 ### App Description
 An app that lets you take flashcards
 
 ### App Walk-though
 
-<img src=https://user-images.githubusercontent.com/32272045/48679917-668f0380-eb5b-11e8-95d9-50999727b76c.gif width=200><img src=https://user-images.githubusercontent.com/32272045/48962315-ecd48c80-ef43-11e8-8d8a-28d85df76df6.gif width=200><br>
+<img src=https://user-images.githubusercontent.com/32272045/48974221-b1a38d80-f017-11e8-82ca-fcdfa1ba734c.gif width=200><br>
 
 
 ## Required
-- [x] User can browse through multiple flashcards
-- [x] User can re-open the app and see previously created flashcards
+- [x] User should see the app icon 
+- [x] User should see a splash screen
+- [x] User should see an flip animation when revealing the answer
+- [x] User should see a slide animation when going to the next flashcard
+- [x] User should see a slide animation when going to the previous flashcard
 - [x] Push code to GitHub
 ## Optional
-- [x] User can delete a flashcard
-- [x] User can edit existing flashcard
-- [x] User can store multiple choice questions
+- [ ] User should see a nicer flaschard with rounded corners, shadows, and animating when showing the first time
+- [ ] User should see all views properly layout when using the app on a phone of different sizes
+- [ ] Correct answer in multiple choice should be random
